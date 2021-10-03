@@ -8,7 +8,10 @@
   "scripts": {
     "start": "rails server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "migrate": "rails db:migrate",
+    "seed": "rails db:seed"
+    
   },
   "dependencies": {
     "concurrently": "^6.0.0"
