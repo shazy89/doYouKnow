@@ -1,0 +1,85 @@
+
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(rgba(177, 177, 177, 0.144), rgba(255, 253, 253, 0.397)), url('https://res.cloudinary.com/dytheecsk/image/upload/c_scale,w_1956/v1632321778/jess-bailey-l3N9Q27zULw-unsplash_ykoaq1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.app {
+  &_container {
+    background-color: $questions-white;
+    position: absolute;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px 3px rgba(119, 119, 119, 0.747);
+    width: 50vw;
+    height: auto;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    flex-flow: column;
+  }
+
+  &_question {
+    animation: move 1s ease-in;
+  }
+  &_options {
+    color: $answers-grey;
+    font-size: 0;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    text-align: start;
+    transition: all 0.2s;
+    span {
+      font-size: 3rem;
+      display: inline-block;
+      animation: leftToRight 1s ease-in-out;
+      width: 49%;
+      opacity: 0;
+      border: 2px solid;
+      border-radius: 10px;
+      text-align: center;
+
+      &:hover {
+        transform: translate(2px, 2px);
+      }
+    }
+    span:nth-child(3),
+    span:nth-child(4) {
+      margin-top: 1rem;
+    }
+    span:nth-child(1),
+    span:nth-child(3) {
+      margin-right: 4px;
+    }
+  }
+}
+
+.yoi {
+  transition: 300ms all ease;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.show {
+  opacity: 1 !important;
+}
+.question {
+  &_box {
+    padding: 2rem;
+    border-top: 2px solid rgba(22, 22, 22, 0.747);
+    width: 100%;
+    text-align: center; 
+    
+  }
+}

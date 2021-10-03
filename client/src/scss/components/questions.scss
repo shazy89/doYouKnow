@@ -1,0 +1,42 @@
+.question {
+  &_correct {
+    background-color: $questions-correct;
+    color: $questions-white;
+    border-radius: 20px;
+    text-align: center;
+  }
+  &_incorrect {
+    background-color: $questions-incorrect;
+    color: $questions-white;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+.loading {
+  text-align: center;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.8 !important;
+}
+
+.after {
+  &_answer {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  &_correct {
+    background-color: $questions-correct !important;
+    color: $questions-white !important;
+  }
+  &_incorrect {
+    background-color: $questions-incorrect !important;
+    color: $questions-white !important;
+  }
+  &_headers {
+    font-size: 3rem;
+  }
+  &_text {
+    font-size: 1.5rem;
+  }
+}
